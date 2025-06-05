@@ -1,0 +1,482 @@
+/* Reset e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-primaria: #FFA500;
+    --cor-secundaria: #003366;
+    --cor-texto: #333333;
+    --cor-texto-claro: #666666;
+    --cor-fundo: #f9f9f9;
+    --cor-branco: #ffffff;
+    --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-texto);
+    line-height: 1.6;
+    background-color: var(--cor-fundo);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #e69500;
+    transform: translateY(-2px);
+    box-shadow: var(--sombra);
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.2rem;
+    color: var(--cor-secundaria);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--cor-primaria);
+    margin: 15px auto 0;
+}
+
+.bg-light {
+    background-color: var(--cor-branco);
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: var(--cor-branco);
+    box-shadow: var(--sombra);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.cabecalho .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cor-secundaria);
+}
+
+.logo span {
+    color: var(--cor-primaria);
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 30px;
+}
+
+.menu a {
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--cor-primaria);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    height: 100vh;
+    color: var(--cor-branco);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px; /* Compensa o header fixo */
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease;
+}
+
+/* Benefícios */
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.beneficio-card {
+    background-color: var(--cor-branco);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease;
+}
+
+.beneficio-card:hover {
+    transform: translateY(-10px);
+}
+
+.beneficio-card .icone {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.beneficio-card h3 {
+    margin-bottom: 15px;
+    color: var(--cor-secundaria);
+}
+
+/* Como Funciona */
+.funcionamento {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.passo {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+.passo-numero {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.passo-content h3 {
+    margin-bottom: 10px;
+    color: var(--cor-secundaria);
+}
+
+/* Paraná */
+.parana-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.parana-texto {
+    flex: 1;
+}
+
+.parana-texto p {
+    margin-bottom: 20px;
+}
+
+.parana-mapa {
+    flex: 1;
+}
+
+.mapa-simbolico {
+    position: relative;
+    height: 400px;
+    background-color: #e6f2ff;
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+}
+
+.cidade {
+    position: absolute;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.sol {
+    position: absolute;
+    font-size: 3rem;
+    top: 10%;
+    right: 10%;
+    animation: pulse 2s infinite;
+}
+
+/* Contato */
+.contato-content {
+    display: flex;
+    gap: 50px;
+}
+
+.contato-form {
+    flex: 1;
+    background-color: var(--cor-branco);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contato-info {
+    flex: 1;
+}
+
+.contato-info h3 {
+    margin-bottom: 20px;
+    color: var(--cor-secundaria);
+}
+
+.contato-info p {
+    margin-bottom: 15px;
+}
+
+.redes-sociais {
+    margin-top: 30px;
+}
+
+.social-icon {
+    display: inline-block;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--cor-primaria);
+}
+
+/* Rodapé */
+.rodape {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    padding: 60px 0 20px;
+}
+
+.rodape-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.rodape-logo h2 {
+    color: var(--cor-branco);
+    margin-bottom: 15px;
+}
+
+.rodape-logo span {
+    color: var(--cor-primaria);
+}
+
+.rodape-links h3,
+.rodape-newsletter h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.rodape-links ul {
+    list-style: none;
+}
+
+.rodape-links li {
+    margin-bottom: 10px;
+}
+
+.rodape-links a {
+    transition: color 0.3s ease;
+}
+
+.rodape-links a:hover {
+    color: var(--cor-primaria);
+}
+
+.rodape-newsletter input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.rodape-newsletter button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rodape-newsletter button:hover {
+    background-color: #e69500;
+}
+
+.rodape-copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animações */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cabecalho .container {
+        flex-direction: column;
+    }
+
+    .menu ul {
+        margin-top: 20px;
+    }
+
+    .menu li {
+        margin: 0 10px;
+    }
+
+    .hero-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .parana-content,
+    .contato-content {
+        flex-direction: column;
+    }
+
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
